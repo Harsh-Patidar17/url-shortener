@@ -1,10 +1,10 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import QRCode from "react-qr-code";
 import QRCodeGenerator from "qrcode";
 
 const API_BASE_URL = import.meta.env.VITE_BACKEND_URL;
-
+console.log(import.meta.env);
 function App() {
   const [url, setUrl] = useState("");
   const [shortUrl, setShortUrl] = useState("");
@@ -54,7 +54,7 @@ function App() {
         />
         <button
           onClick={handleShorten}
-          className="btn btn-primary w-full sm:auto"
+          className="btn btn-primary w-full sm:w-auto"
           disabled={loading}
         >
           Shorten
